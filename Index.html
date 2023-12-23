@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Blood Bank Information System</title>
+</head>
+<body>
+    <header>
+        <h1>Blood Bank Information System</h1>
+    </header>
+    
+    <div id="donorForm">
+        <h2>Donor Information</h2>
+        <form id="donorInfoForm">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="contactNumber">Contact Number:</label>
+            <input type="tel" id="contactNumber" name="contactNumber" required>
+
+            <label for="bloodType">Blood Type:</label>
+            <input type="text" id="bloodType" name="bloodType" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <button type="button" onclick="saveDonorInfo()">Save Donor Info</button>
+        </form>
+    </div>
+
+    <div id="donorList">
+        <h2>Donor List</h2>
+        <ul id="donorInfoList"></ul>
+    </div>
+
+    <div id="receiverSection">
+        <h2>Find a Donor</h2>
+        <form id="receiverForm">
+            <label for="requiredBloodType">Required Blood Type:</label>
+            <input type="text" id="requiredBloodType" name="requiredBloodType" required>
+
+            <button type="button" onclick="findDonor()">Find Donor</button>
+        </form>
+
+        <div id="matchedDonorList">
+            <h3>Matched Donors</h3>
+            <ul id="matchedDonorInfoList"></ul>
+        </div>
+    </div>
+
+    <script src="Index.js"></script>
+</body>
+</html>
